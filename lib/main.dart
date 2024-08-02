@@ -1,37 +1,38 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 25, 30, 65),
         body: SafeArea(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(
+            const CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('images/angela.jpg'),
+              backgroundImage: AssetImage('images/headshot.jpg'),
             ),
-            Text(
-              'Angela Yu',
+            const Text(
+              'Ria Tandon',
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontSize: 40.0,
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              'FLUTTER DEVELOPER',
+              'UNIVERSITY OF MICHIGAN',
               style: TextStyle(
                 fontFamily: 'Source Sans Pro',
-                color: Colors.teal.shade100,
+                color: Color.fromARGB(255, 70, 109, 137),
                 fontSize: 20.0,
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
@@ -41,35 +42,35 @@ class MyApp extends StatelessWidget {
               height: 20.0,
               width: 150.0,
               child: Divider(
-                color: Colors.teal.shade100,
+                color: Color.fromARGB(255, 70, 109, 137),
               ),
             ),
             Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.phone,
-                    color: Colors.teal,
+                    color: Color.fromARGB(255, 70, 109, 137),
                   ),
                   title: Text(
-                    '+44 123 456 789',
+                    '+1 908 381 2948',
                     style: TextStyle(
-                      color: Colors.teal.shade900,
+                      color: Color.fromARGB(255, 70, 109, 137),
                       fontFamily: 'Source Sans Pro',
                       fontSize: 20.0,
                     ),
                   ),
                 )),
             Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.email,
-                    color: Colors.teal,
+                    color: Color.fromARGB(255, 70, 109, 137),
                   ),
                   title: Text(
-                    'angela@email.com',
-                    style: TextStyle(fontSize: 20.0, color: Colors.teal.shade900, fontFamily: 'Source Sans Pro'),
+                    'rtandonn@umich.edu',
+                    style: TextStyle(fontSize: 20.0, color:Color.fromARGB(255, 70, 109, 137), fontFamily: 'Source Sans Pro'),
                   ),
                 ))
           ],
@@ -78,3 +79,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+// og teal: 255, 79, 163, 155
+// dark blue: 255, 25, 30, 65
+// steel blue: 255, 70, 109, 137
